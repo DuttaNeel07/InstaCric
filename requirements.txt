@@ -1,0 +1,5 @@
+bs4==0.0.2
+lxml==6.1.0
+html5lib==1.1 
+six==1.17.0 
+webencodings==0.5.1
