@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import time
-import os
+from notifypy import Notify
 
 driver = webdriver.Chrome(
     service=Service(ChromeDriverManager().install())
@@ -133,26 +133,37 @@ while True:
 
                     print("\nFOUR!")
 
-                    os.system("""
-                    osascript -e 'display notification "Boundary scored" with title "🏏 FOUR"'
-                    """)
+                    notification = Notify()
+
+                    notification.title = "🏏 FOUR"
+
+                    notification.message = "Boundary scored"
+
+                    notification.send()
 
                 elif "run6" in latest_class:
 
                     print("\nSIX!")
 
-                    os.system("""
-                    osascript -e 'display notification "Maximum scored" with title "🏏 SIX"'
-                    """)
+                    notification = Notify()
+
+                    notification.title = "🏏 SIX"
+
+                    notification.message = "Maximum scored"
+
+                    notification.send()
 
                 elif "wicket" in latest_class.lower():
 
                     print("\nWICKET!")
 
-                    os.system("""
-                    osascript -e 'display notification "Batsman Out" with title "🏏 WICKET"'
-                    """)
+                    notification = Notify()
 
+                    notification.title = "🏏 WICKET"
+
+                    notification.message = "Batsman Out"
+
+                    notification.send()
                 else:
 
                     print("\nNormal ball event")
@@ -163,9 +174,9 @@ while True:
 
             print("\nNo new updates")
 
-        print("\nWaiting 15 seconds...\n")
+        print("\nWaiting 10 seconds...\n")
 
-        time.sleep(15)
+        time.sleep(10)
 
     except Exception as e:
 
