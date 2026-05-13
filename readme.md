@@ -27,7 +27,7 @@ The project uses Selenium to open the live cricket page, detect the current IPL 
 Clone the repository:
 
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/DuttaNeel07/InstaCric
 cd InstaCric
 ```
 
