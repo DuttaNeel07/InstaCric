@@ -1,3 +1,3 @@
 selenium
 webdriver-manager
-notifypy
+notify_py
